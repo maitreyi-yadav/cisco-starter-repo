@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import './blue.css'; // Import the blue-theme.css file
+import Banner from './banner';
+import Exhibit from './exhibit';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Banner title="Colorful Website" />
+      <Exhibit heading="Section 1">
+        {/* Add your child components here */}
+        <p>This is the content of Section 1.</p>
+      </Exhibit>
+      <Exhibit heading="Section 2">
+        {/* Add your child components here */}
+        <p>This is the content of Section 2.</p>
+      </Exhibit>
+      {/* Add more Exhibit components as needed */}
     </div>
   );
-}
+};
 
 export default App;
